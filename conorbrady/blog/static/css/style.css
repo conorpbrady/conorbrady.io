@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #282828;
+  color: #FBF1C7;
+  font-family: Menlo, monospace;
+  font-size: 1rem;
+}
+
+.body-contain {
+  width: 60%;
+  margin: 1em auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #D65D0E;
+}
+
+a {
+ color: #458588;
+ }

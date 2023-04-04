@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+  <div class="body-contain">
+  {% include 'navbar.html' %}
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  {% include 'footer.html' %}
+  </div>
+</body>/
+</html>
