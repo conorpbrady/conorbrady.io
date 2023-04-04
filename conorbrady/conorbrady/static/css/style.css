@@ -4,7 +4,7 @@ body {
   background-color: #282828;
   color: #FBF1C7;
   font-family: Menlo, monospace;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .body-contain {
@@ -12,17 +12,10 @@ body {
   margin: 1rem auto;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   color: #D65D0E;
 }
 
-h4, h5 {
-  color: #0C9D4B;
-}
 a {
  color: #458588;
-}
-
-p {
-  font-size: 0.9rem;
 }
