@@ -5,4 +5,4 @@ class IndexView(generic.TemplateView):
 
 
 class ResumeView(generic.TemplateView):
-    template_name = 'index.html'
+    template_name = 'resume.html'

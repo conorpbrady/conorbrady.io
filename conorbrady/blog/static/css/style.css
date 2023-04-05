@@ -5,6 +5,9 @@ body {
   color: #FBF1C7;
   font-family: Menlo, monospace;
   font-size: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .body-contain {
@@ -25,4 +28,23 @@ a {
 
 p {
   font-size: 0.9rem;
+}
+
+#page-container {
+  flex: 1;
+}
+
+
+#content-wrap {
+  padding-bottom: 2.5rem;
+}
+
+header {
+  min-height: 50px;
+}
+footer {
+  min-height: 50px;
+}
+section {
+  padding: 0 0.5rem;
 }
