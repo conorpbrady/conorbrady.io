@@ -4,8 +4,8 @@
 {% block content %}
 <div class="page-container">
   <div class="article-head">
-    <p>Created: {{ article.pub_date }}</p>
-    <p>Last modified: {{ article.modified_date}}</p>
+    <p>Created: {{ article.pub_date | date:"Y-m-d" }}</p>
+    <p>Last modified: {{ article.modified_date | date:"Y-m-d H:i T"}}</p>
   </div>
   <div class="article-body">
   {{ article.body | markdownify }}

@@ -3,10 +3,12 @@
 {% block content %}
 <div class="page-containter">
   <h2>Blog</h2>
-
-  {% for article in articles %}
-    <a href="{{ article.slug }}">{{ article.slug }}</a><br>
+  <ul>
+    {% for article in articles %}
+    <li> {{ article.pub_date | date:"Y-m-d" }} |
+      <a href="{{ article.slug }}">{{ article.slug }}</a>
+    </li>
   {% endfor %}
-
+  </ul>
 </div>
 {% endblock %}

@@ -52,16 +52,18 @@ class Command(BaseCommand):
             mod_time = self.last_modified(file)
 
             data, body = self.parse_file(file)
-            # If newer than last db entry, update db
-            result = Article.objects.filter(slug = data['slug']).latest('modified_date')
+
+            # If slug doesn't exist or newer than last db entry, update db
             create_new = False
-            if result is None:
-                create_new = True
-            else:
+            try:
+                result = Article.objects.filter(slug = data['slug']).latest('modified_date')
                 if mod_time > result.modified_date:
                     create_new = True
                     result.active = False
                     result.save()
+            except ObjectDoesNotExist:
+                create_new = True
+
             if create_new:
                 # If new file insert new record
                 pub_date = data['date'].replace(tzinfo=pytz.UTC)
