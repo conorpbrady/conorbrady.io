@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog.apps.BlogConfig'
+    'blog.apps.BlogConfig',
+    'markdownify',
 ]
 
 MIDDLEWARE = [
@@ -146,3 +147,22 @@ LOGGING = {
         'handlers': ['console', 'logfile']
     },
 }
+
+MARKDOWNIFY = {
+        'default': {
+            'STRIP': False,
+            'WHITELIST_TAGS': {'a', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'li', 'ol', 'span',
+                               'blockquote', 'strong', 'em', 'b', 'i', 'pre', 'code', 'div'},
+            'WHITELIST_ATTRS': ['class'],
+            'MARKDOWN_EXTENSIONS': [
+                'fenced_code',
+                'codehilite'
+                ],
+            'MARKDOWN_EXTENSION_CONFIG': {
+                'codehilite': {
+                    'use_pygments': True,
+                    },
+                }
+
+            }
+        }

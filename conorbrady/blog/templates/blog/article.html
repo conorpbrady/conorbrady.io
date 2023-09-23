@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load markdownify %}
+
+{% block content %}
+<div class="page-container">
+  <div class="article-head">
+    <p>Created: {{ article.pub_date }}</p>
+    <p>Last modified: {{ article.modified_date}}</p>
+  </div>
+  <div class="article-body">
+  {{ article.body | markdownify }}
+  </div>
+</div>
+
+{% endblock %}

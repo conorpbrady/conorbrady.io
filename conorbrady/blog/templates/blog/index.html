@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-containter">
+  <h2>Blog</h2>
+
+  {% for article in articles %}
+    <a href="{{ article.slug }}">{{ article.slug }}</a><br>
+  {% endfor %}
+
+</div>
+{% endblock %}
