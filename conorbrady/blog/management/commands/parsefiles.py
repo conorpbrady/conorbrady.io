@@ -3,15 +3,16 @@ from django.core.exceptions import ObjectDoesNotExist
 from blog.models import Article, Label
 import os
 import datetime, pytz
-
+from dotenv import load_dotenv
+load_dotenv()
 class Command(BaseCommand):
 
 
     def get_files(self):
 
-        DIR = '../../articles'
+        article_dir = os.environ['ARTICLE_DIR']
         records = []
-        for path, dirs, files, in os.walk(DIR):
+        for path, dirs, files, in os.walk(article_dir):
             for file in files:
                 if file[-3:] == '.md':
                     records.append(os.path.join(path, file))
