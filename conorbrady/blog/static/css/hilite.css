@@ -7,6 +7,12 @@ pre {
   word-wrap: break-word;
   white-space: break-spaces;
 }
+blockquote {
+  border: 1px solid black;
+  background-color: grey;
+  border-radius: px;
+  padding: 0em 1em;
+}
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
 span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
 td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
