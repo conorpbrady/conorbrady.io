@@ -11,10 +11,9 @@ class BlogList(generic.ListView):
 
     template_name = 'blog/index.html'
     context_object_name = 'articles'
-    ordering = ['-pub_date']
 
     def get_queryset(self):
-        return Article.objects.filter(active = True)
+        return Article.objects.filter(active = True).order_by('-pub_date')
 
 class BlogDetail(generic.DetailView):
     template_name = 'blog/article.html'
