@@ -11,12 +11,21 @@ body {
   width: 60%;
   margin: 1vh auto;
   height: 98vh;
+  display: flex;
+  flex-direction: column;
 }
 
+main {
+  flex: 1;
+}
 h1, h2, h3, h4, h5, h6 {
   color: #D65D0E;
 }
 
 a {
  color: #458588;
+}
+
+footer p {
+  margin: 0;
 }
