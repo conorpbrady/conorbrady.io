@@ -9,7 +9,8 @@ body {
 
 .body-contain {
   width: 60%;
-  margin: 1rem auto;
+  margin: 1vh auto;
+  height: 98vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
